@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Qena-HandCrafts | 1 - Activity</title>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <nav>
+        <a href="" class="logo">Qena-HC</a>
+        <ul id="menuList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="serv.html">Services</a></li>
+            <li><a href="cont.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <section class="sub-img">
+        <h1>Providing job opportunities</h1>
+    </section>
+    <section class="Pro">
+        <div class="bro">
+            <h4 class="Pro-h4">providing job opportunities</h4>
+            <p class="Pro-h4">Handcrafts create job opportunities by fostering<br>local economies, empowering artisans,
+                promoting skills development, encouraging entrepreneurship<br>and enhancing community cohesion through
+                creativity.</p>
+        </div>
+        <div class="Activities-imge">
+            <img src="Images/close-up-people-working-from-home.jpg" alt="" class="image">
+        </div>
+    </section>
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+    <script>
+        ScrollReveal({
+            origin: 'bottom',
+            duration: "700",
+            distance: '50px'
+        })
+        ScrollReveal().reveal('.bro', ScrollReveal());
+        ScrollReveal().reveal('.image', ScrollReveal({duration:500}));
+    </script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Qena-HandCrafts | 1 - Activity</title>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <nav>
+        <a href="" class="logo">Qena-HC</a>
+        <ul id="menuList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="serv.html">Services</a></li>
+            <li><a href="cont.html">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+    <section class="sub-img">
+        <h1>best Places To Sell HandCrafts Products</h1>
+    </section>
+    <section class="Best-Places">
+        <div class="Place-Content">
+            <div class="Place-Map">
+                <h4 class="title"><span>Pot</span>tery</h4>
+                <p>Nag al-Sheikh Ali, affiliated with the Naqada Center, is considered the home of the pottery industry,
+                    where pottery artifacts are made, some of which are used as cooking utensils and others for
+                    decoration. Among the types of pottery are various shapes.
+                    And their sizes, jugs, flowers, and vases that are sold locally or exported to other cities in
+                    Egypt.</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14350.751760584142!2d32.75624947536983!3d25.945469350371262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1449493517b4d55d%3A0x99177fcbafbae684!2z2YXYtdin2YbYuSDZgdiu2KfYsSDZhdit2YXZiNivINi52YXYp9ix2Kk!5e0!3m2!1sar!2seg!4v1729272132045!5m2!1sar!2seg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="ifram"></iframe>
+            </div>
+            <div class="Place-Map">
+                <h4 class="title"><span>El F</span>erka</h4>
+                <p>The Naqada Center is unique in the manufacture of the farka, which is a handmade silk shawl. It
+                    represents a religious belief in some African countries that it brings blessing.</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57456.6789938576!2d32.82386607832031!3d25.835146899999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14494709199797ef%3A0x9e15a0535262d15e!2z2YXYtNi62YQg2KfZhNiz2KzYp9ivINin2YTZitiv2YjZig!5e0!3m2!1sar!2seg!4v1729272639448!5m2!1sar!2seg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="ifram"></iframe>
+            </div>
+            <div class="Place-Map">
+                <h4 class="title"><span>El Sar</span>su</h4>
+                <p>Fair Trade Egypt is committed to promoting ethical and eco-conscious Egyptian handicraft products by
+                    establishing strong partnerships with artisans. Our curated selection of handicrafts in Egypt
+                    includes home décor, accessories, and gift items that are made with respect for both people and the
+                    planet. </p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7286615.899145397!2d30.8768375!3d26.906099949999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583f5af3f95865%3A0xec4906ca714e21af!2sFair%20Trade%20Egypt!5e0!3m2!1sar!2seg!4v1729272766474!5m2!1sar!2seg"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="ifram"></iframe>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader");
+
+            loader.classList.add("loader--hidden");
+
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+    </script>
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+    <script>
+        ScrollReveal({
+            origin: 'bottom',
+            duration: "500",
+            distance: '50px'
+        })
+        ScrollReveal().reveal('.title', {duration: 1000});
+        ScrollReveal().reveal('.Best-Places', ScrollReveal());
+        ScrollReveal().reveal('.ifram', ScrollReveal({duration:700}));
+    </script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</body>
+
+</html>

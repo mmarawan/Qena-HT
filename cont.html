@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <title>Qena-HandCrafts | About</title>
+</head>
+
+<body>
+  <div class="loader"></div>
+  <nav>
+    <a href="" class="logo">Qena-HC</a>
+    <ul id="menuList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="serv.html">Services</a></li>
+      <li><a href="cont.html">Contact</a></li>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+  </nav>
+  <!----<a href="" class="menu"><i class="ri-menu-3-line"></i></a>---->
+  <section class="sub-img">
+    <h1>Subscribe</h1>
+  </section>
+  <section class="section__container newsletter__container" id="contact">
+    <div class="new">
+      <h1 class="title"><span>Subs</span>cribe</h1>
+      <div class="newsletter__content">
+        <h2 class="section__header">Subscribe To Us</h2>
+        <p class="section__description">
+          Join Us And Have Early News With All Information From Us.
+        </p>
+        <form action="https://www.facebook.com/naqadaart?mibextid=ZbWKwL" method="POST">
+          <input type="email" placeholder="Enter Your Email" required>
+          <button class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="main.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      const loader = document.querySelector(".loader");
+
+      loader.classList.add("loader--hidden");
+
+      loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+      });
+    });
+  </script>
+  <script>
+    const banner = document.querySelector(".banner__wrapper");
+
+    Array.from(banner.children).forEach((item) => {
+      const duplicateNode = item.cloneNode(true);
+      duplicateNode.setAttribute("aria-hidden", true);
+      banner.appendChild(duplicateNode);
+    });
+
+  </script>
+  <script>
+    let menuList = document.getElementById("menuList")
+    menuList.style.maxHeight = "0px";
+
+    function toggleMenu() {
+      if (menuList.style.maxHeight == "0px") {
+        menuList.style.maxHeight = "300px";
+      }
+      else {
+        menuList.style.maxHeight = "0px";
+      }
+    }
+
+  </script>
+  <script>
+    ScrollReveal().reveal('.title', {duration: 1000});
+  </script>
+  <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</body>
+
+</html>
